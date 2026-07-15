@@ -3,93 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAPPY BIRTHDAY Pria Kesayanganku ❤️</title>
+<title>Happy Birthday Pria Kesayanganku ❤️</title>
 
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(#ffd6e7, #fff);
-  text-align: center;
-  color: #444;
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.container {
-  padding: 30px 20px;
+body{
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff9ecb,#ffd6e7,#ffeef6,#ffc2dd);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
 }
 
-h1 {
-  color: #e91e63;
-  font-size: 35px;
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-.heart {
-  font-size: 60px;
-  animation: denyut 1s infinite;
+.container{
+width:90%;
+max-width:500px;
+text-align:center;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+position:relative;
+z-index:5;
 }
 
-@keyframes denyut {
-  50% { transform: scale(1.2); }
+.heart{
+font-size:70px;
+animation:beat 1s infinite;
 }
 
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 25px;
-  margin-top: 20px;
-  box-shadow: 0 5px 15px #ccc;
+@keyframes beat{
+50%{transform:scale(1.2);}
 }
 
-button {
-  background: #e91e63;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 30px;
-  font-size: 16px;
+h1{
+color:#e91e63;
+margin:10px 0;
 }
 
+.frame{
+width:220px;
+height:220px;
+margin:20px auto;
+clip-path:path("M110 200 C20 140 0 70 55 35 C85 15 110 35 110 55 C110 35 135 15 165 35 C220 70 200 140 110 200");
+overflow:hidden;
+border:6px solid #ff4f87;
+box-shadow:0 0 15px pink;
+}
+
+.frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+line-height:1.8;
+box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+button{
+margin-top:15px;
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:#e91e63;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+/* Hati Jatuh */
+.fall{
+position:fixed;
+top:-20px;
+color:#ff4d88;
+animation:fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+/* Bubble */
+.bubble{
+position:fixed;
+bottom:-100px;
+border-radius:50%;
+background:rgba(255,255,255,.4);
+animation:bubble linear infinite;
+pointer-events:none;
+}
+
+@keyframes bubble{
+to{
+transform:translateY(-120vh);
+}
+}
 </style>
 </head>
 
 <body>
 
+<!-- Musik -->
+<audio controls autoplay loop>
+<source src="menua-bersama.mp3" type="audio/mpeg">
+</audio>
+
 <div class="container">
 
 <div class="heart">❤️</div>
 
-<h1>Untuk Pria Kesayanganku</h1>
-<img src="IMG_20260715_115615.jpg"
-style="
-width:300px;
-height:300px;
-object-fit:cover;
-clip-path: polygon(50% 90%, 10% 50%, 0 35%, 5% 15%, 20% 5%, 35% 10%, 50% 25%, 65% 10%, 80% 5%, 95% 15%, 100% 35%, 90% 50%);
-margin-top:20px;
-">
+<h1>Happy Birthday<br>Pria Kesayanganku</h1>
+
+<div class="frame">
+<img src="foto.jpg" alt="Foto">
+</div>
 
 <div class="card">
+
+<p>Semoga allah selalu melindungimu,
+  menjaga setiap langkahmu,
+  serta memudahkan segala urusanmu.
+  semoga selalu sehat dan bahagia.</p>
+
 <p>
-Terima kasih sudah menjadi bagian dari hidupku.
+terimakasih telah memilih untuk bersamaku, 
+semoga kita diberi kesempatan untuk menua bersama,
+saling mencintai dan menguatkan.
 </p>
 
 <p>
-Aku mungkin tidak selalu sempurna,
-tapi aku selalu ingin berjalan bersamamu.
+Selamat ulang tahun sayangku.
 </p>
 
-<p>
-Semoga kita selalu diberi bahagia,
-saling menjaga, dan saling memilih setiap hari.
-</p>
-
-<button onclick="alert('Aku sayang kamu ❤️')">
-Klik aku
+<button onclick="alert('I LOVE YOU ❤️')">
+Klik Aku
 </button>
 
 </div>
 
 </div>
+
+<script>
+
+// Hati Jatuh
+for(let i=0;i<40;i++){
+let h=document.createElement("div");
+h.className="fall";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*25)+"px";
+h.style.animationDuration=(5+Math.random()*6)+"s";
+h.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(h);
+}
+
+// Bubble
+for(let i=0;i<30;i++){
+let b=document.createElement("div");
+b.className="bubble";
+let s=10+Math.random()*35;
+b.style.width=s+"px";
+b.style.height=s+"px";
+b.style.left=Math.random()*100+"vw";
+b.style.animationDuration=(6+Math.random()*8)+"s";
+b.style.animationDelay=Math.random()*6+"s";
+document.body.appendChild(b);
+}
+
+</script>
 
 </body>
 </html>
