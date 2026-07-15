@@ -10,6 +10,27 @@
 
 <style>
 
+.hati{
+    position:fixed;
+    top:-20px;
+    font-size:25px;
+    animation:jatuhHati 6s linear infinite;
+    z-index:2;
+    pointer-events:none;
+}
+
+@keyframes jatuhHati{
+    0%{
+        transform:translateY(-20px) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
 .sakura{
     position:fixed;
     top:-20px;
@@ -29,24 +50,22 @@
         opacity:0;
     }
 } 
-
-.hati{
+    
+.kembang{
     position:fixed;
-    top:-20px;
     font-size:25px;
-    animation:jatuhHati 6s linear infinite;
-    z-index:2;
+    z-index:10;
+    animation:ledak 1.5s ease-out forwards;
     pointer-events:none;
 }
 
-@keyframes jatuhHati{
+@keyframes ledak{
     0%{
-        transform:translateY(-20px) rotate(0deg);
+        transform:scale(0);
         opacity:1;
     }
-
     100%{
-        transform:translateY(110vh) rotate(360deg);
+        transform:scale(3) translateY(-100px);
         opacity:0;
     }
 }
@@ -79,7 +98,6 @@ body{
     from{opacity:.2;}
     to{opacity:1;}
 }
-
 
 /* bubble */
 .bubble{
@@ -381,6 +399,55 @@ dan saling menjaga.
 </div>
   <script>
 
+function buatSakura(){
+
+    for(let i=0;i<20;i++){
+
+        let bunga=document.createElement("div");
+
+        bunga.className="sakura";
+
+        bunga.innerHTML="🌸";
+
+        bunga.style.left=Math.random()*100+"vw";
+
+        bunga.style.animationDelay=Math.random()*5+"s";
+
+        document.body.appendChild(bunga);
+
+    }
+
+}
+
+buatSakura();
+
+function buatKembangApi(){
+
+    for(let i=0;i<30;i++){
+
+        let k=document.createElement("div");
+
+        k.className="kembang";
+
+        k.innerHTML="✨";
+
+        k.style.left=(40 + Math.random()*20)+"vw";
+
+        k.style.top=(30 + Math.random()*30)+"vh";
+
+        k.style.animationDelay=(Math.random()*1)+"s";
+
+        document.body.appendChild(k);
+
+
+        setTimeout(()=>{
+            k.remove();
+        },2000);
+
+    }
+
+}
+      
 function buka(nama){
 
     document.querySelector(".container").style.display="none";
@@ -423,27 +490,7 @@ function buatHati(){
     }
 
 }
-function buatSakura(){
 
-    for(let i=0;i<20;i++){
-
-        let bunga=document.createElement("div");
-
-        bunga.className="sakura";
-
-        bunga.innerHTML="🌸";
-
-        bunga.style.left=Math.random()*100+"vw";
-
-        bunga.style.animationDelay=Math.random()*5+"s";
-
-        document.body.appendChild(bunga);
-
-    }
-
-}
-
-buatSakura();
 </script>  
 </body>
 </html>
