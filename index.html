@@ -275,6 +275,34 @@ document.getElementById(nama).style.display="block";
 }
 
 
+<script>
+
+for(let i=0;i<20;i++){
+
+    const bunga=document.createElement("div");
+
+    bunga.className="sakura";
+
+    bunga.innerHTML="🌸";
+
+    bunga.style.left=Math.random()*100+"vw";
+
+    bunga.style.animationDuration=(6+Math.random()*6)+"s";
+
+    bunga.style.animationDelay=Math.random()*5+"s";
+
+    document.body.appendChild(bunga);
+
+}
+
+function buka(nama){
+
+document.querySelector(".container").style.display="none";
+
+document.getElementById(nama).style.display="block";
+
+}
+
 function kembali(){
 
 document.querySelector(".container").style.display="flex";
@@ -284,6 +312,9 @@ document.getElementById("kenangan").style.display="none";
 document.getElementById("surat").style.display="none";
 document.getElementById("kejutan").style.display="none";
 
+}
+
+</script>
 }
 
 </script>
