@@ -116,6 +116,26 @@ button{
     box-shadow:0 0 15px rgba(255,255,255,.6);
     animation:zoomFoto 2s ease-in-out infinite alternate;
 }
+  /* Sakura */
+.sakura{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation:jatuh linear infinite;
+    pointer-events:none;
+    z-index:1;
+}
+
+@keyframes jatuh{
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:.8;
+    }
+}
 </style>
 
 </head>
@@ -228,6 +248,23 @@ Aku sayang kamu ❤️
 
 
 <script>
+ for(let i=0;i<20;i++){
+
+    const bunga=document.createElement("div");
+
+    bunga.className="sakura";
+
+    bunga.innerHTML="🌸";
+
+    bunga.style.left=Math.random()*100+"vw";
+
+    bunga.style.animationDuration=(6+Math.random()*6)+"s";
+
+    bunga.style.animationDelay=Math.random()*5+"s";
+
+    document.body.appendChild(bunga);
+
+}
 
 function buka(nama){
 
