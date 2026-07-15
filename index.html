@@ -156,19 +156,19 @@ Sebuah kejutan kecil khusus untukmu...
 </p>
 
 
-<button>
+<button onclick="buka('pesan')">
 💌 Buka Pesan Cinta
 </button>
 
-<button>
+<button onclick="buka('kenangan')">
 📸 Kenangan Kita
 </button>
 
-<button>
+<button onclick="buka('surat')">
 💕 Surat Rahasia
 </button>
 
-<button>
+<button onclick="buka('kejutan')">
 🎁 Kejutan Terakhir
 </button>
 
@@ -177,6 +177,183 @@ Sebuah kejutan kecil khusus untukmu...
 
 </div>
 
+<!-- Halaman Pesan -->
 
+<div id="pesan" class="card" style="display:none;">
+<h1>💌 Pesan Cinta</h1>
+
+<p>
+Terima kasih sudah hadir dalam hidupku.
+Aku mungkin tidak sempurna,
+tapi aku selalu ingin memilihmu.
+❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Kenangan -->
+
+<div id="kenangan" class="card" style="display:none;">
+
+<h1>📸 Kenangan Kita</h1>
+
+<p>
+Setiap waktu bersamamu adalah cerita
+yang ingin selalu aku simpan.
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Surat -->
+
+<div id="surat" class="card" style="display:none;">
+
+<h1>💕 Surat Rahasia</h1>
+
+<p>
+Terima kasih sudah menjadi bagian
+dari perjalanan hidupku.
+Aku sayang kamu ❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Kejutan -->
+
+<div id="kejutan" class="card" style="display:none;">
+
+<h1>🎁 Kejutan Terakhir</h1>
+
+<p>
+Aku berharap kita selalu bersama
+dan saling menjaga.
+❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div><!-- Halaman Pesan -->
+
+<div id="pesan" class="card" style="display:none;">
+<h1>💌 Pesan Cinta</h1>
+
+<p>
+Terima kasih sudah hadir dalam hidupku.
+Aku mungkin tidak sempurna,
+tapi aku selalu ingin memilihmu.
+❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Kenangan -->
+
+<div id="kenangan" class="card" style="display:none;">
+
+<h1>📸 Kenangan Kita</h1>
+
+<p>
+Setiap waktu bersamamu adalah cerita
+yang ingin selalu aku simpan.
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Surat -->
+
+<div id="surat" class="card" style="display:none;">
+
+<h1>💕 Surat Rahasia</h1>
+
+<p>
+Terima kasih sudah menjadi bagian
+dari perjalanan hidupku.
+Aku sayang kamu ❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+
+
+
+<!-- Halaman Kejutan -->
+
+<div id="kejutan" class="card" style="display:none;">
+
+<h1>🎁 Kejutan Terakhir</h1>
+
+<p>
+Aku berharap kita selalu bersama
+dan saling menjaga.
+❤️
+</p>
+
+<button onclick="kembali()">
+⬅ Kembali
+</button>
+
+</div>
+  <script>
+
+function buka(nama){
+
+    document.querySelector(".container").style.display="none";
+
+    document.getElementById(nama).style.display="block";
+
+}
+
+
+function kembali(){
+
+    document.querySelector(".container").style.display="flex";
+
+
+    document.getElementById("pesan").style.display="none";
+
+    document.getElementById("kenangan").style.display="none";
+
+    document.getElementById("surat").style.display="none";
+
+    document.getElementById("kejutan").style.display="none";
+
+}
+
+</script>  
 </body>
 </html>
