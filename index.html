@@ -177,7 +177,7 @@ Sebuah kejutan kecil khusus untukmu...
 </p>
 
 
-<button onclick="buka('pesan')">
+<button onclick="buka('pesan');buatHati()">
 💌 Buka Pesan Cinta
 </button>
 
@@ -384,7 +384,25 @@ function kembali(){
     document.getElementById("kejutan").style.display="none";
 
 }
+function buatHati(){
 
+    for(let i=0;i<15;i++){
+
+        let hati=document.createElement("div");
+
+        hati.className="hati";
+
+        hati.innerHTML="❤️";
+
+        hati.style.left=Math.random()*100+"vw";
+
+        hati.style.animationDelay=Math.random()*5+"s";
+
+        document.body.appendChild(hati);
+
+    }
+
+}
 </script>  
 </body>
 </html>
